@@ -1,8 +1,23 @@
-# Hypoxia-Related Transcriptome Changes in Prostate Cancer
+# Snakemake Hypoxia-Related Transcriptome Changes in Prostate Cancer
+
+<img width="2164" height="727" alt="Untitled-1 copy" src="https://github.com/user-attachments/assets/d87eabfe-8836-4b1c-a448-0c3b5a86276b" />
+
 
 A reproducible Snakemake workflow for analyzing hypoxia-associated
 gene-expression changes in LNCaP prostate cancer cells using GEO dataset
 GSE106305, R, and limma.
+
+## Research Team
+
+**Horizon Science Communication LLC — Bioinformatics Team**
+
+**- Alaa Elmansy**
+
+**- Dr. Abeer Dsouky**
+
+**- Dr. Hesham Abdullah**
+
+**- Mohamed Elsisi**
 
 ## Project Background
 
@@ -12,8 +27,7 @@ gene-expression differences between hypoxia and normoxia in LNCaP
 prostate cancer cells using a publicly available processed RNA-seq
 expression matrix.
 
-**Dataset:** [GEO:
-GSE106305](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE106305)
+**Dataset:** [GEO: GSE106305](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE106305)
 
 ## Project Objectives
 
@@ -32,44 +46,36 @@ The workflow is designed to:
 
 ## Dataset Overview
 
-  -----------------------------------------------------------------------
-  Attribute                           Description
-  ----------------------------------- -----------------------------------
-  GEO accession                       GSE106305
+The analysis uses the processed gene-expression matrix from GEO dataset [GSE106305](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE106305) to investigate hypoxia-related transcriptomic changes in LNCaP prostate cancer cells.
 
-  Cell line                           LNCaP prostate cancer cells
-
-  Comparison                          Empty-vector hypoxia vs
-                                      empty-vector normoxia
-
-  Input                               Processed RPKM expression matrix
-
-  Samples analyzed                    4
-
-  Samples per condition               2
-
-  Differential-expression method      limma with empirical Bayes
-                                      moderation and trend
-
-  Workflow engine                     Snakemake
-
-  Main scripting language             R
-  -----------------------------------------------------------------------
+| Attribute | Description |
+|---|---|
+| **GEO accession** | GSE106305 |
+| **Cell line** | LNCaP prostate cancer cells |
+| **Experimental comparison** | Empty-vector cells under hypoxia vs. normoxia |
+| **Input data** | Processed RPKM gene-expression matrix |
+| **Total samples** | 4 |
+| **Biological replicates** | 2 per condition |
+| **Differential expression analysis** | `limma` with empirical Bayes moderation and trend |
+| **Workflow management** | Snakemake |
+| **Programming language** | R |
+| **Environment management** | Conda |
 
 ### Sample design
 
-  Sample     Condition
-  ---------- -----------
-  `N_EV_1`   Normoxia
-  `N_EV_2`   Normoxia
-  `H_EV_1`   Hypoxia
-  `H_EV_2`   Hypoxia
+| Sample ID | Condition |
+|---|---|
+| `N_EV_1` | Normoxia |
+| `N_EV_2` | Normoxia |
+| `H_EV_1` | Hypoxia |
+| `H_EV_2` | Hypoxia |
 
 The workflow downloads the processed GEO supplementary expression matrix
 as needed. Raw sequencing reads are not required for the current
 analysis and are not included in this repository.
 
 ## Why Snakemake?
+<img width="554" height="197" alt="images" src="https://github.com/user-attachments/assets/8784d842-e4dc-4cf2-a777-6c87effd8399" />
 
 Snakemake organizes the analysis into explicit rules with defined inputs
 and outputs. It helps make the workflow reproducible by tracking file
@@ -204,29 +210,16 @@ genes](results/heatmap_top30.png)
 
 ### 4. Result Tables
 
-  --------------------------------------------------------------------------
-  Output                                 Description
-  -------------------------------------- -----------------------------------
-  `results/DE_results.csv`               Complete primary
-                                         differential-expression results
+| Output | Description |
+|---|---|
+| `results/DE_results.csv` | Complete primary differential-expression results |
+| `results/DE_significant.csv` | Genes passing the configured significance thresholds |
+| `results/DE_results_no_mito.csv` | Differential-expression results after excluding `MT-` genes |
+| `results/DE_significant_no_mito.csv` | Significant genes from the mitochondrial-exclusion analysis |
+| `results/expression_log2.csv` | Prepared log2 expression matrix |
+| `results/samples.csv` | Sample metadata used in the analysis |
+| `results/summary.txt` | Summary statistics and selected top genes |
 
-  `results/DE_significant.csv`           Genes passing the configured
-                                         significance thresholds
-
-  `results/DE_results_no_mito.csv`       Differential-expression results
-                                         after excluding `MT-` genes
-
-  `results/DE_significant_no_mito.csv`   Significant genes from the
-                                         mitochondrial-exclusion analysis
-
-  `results/expression_log2.csv`          Prepared log2 expression matrix
-
-  `results/samples.csv`                  Sample metadata used in the
-                                         analysis
-
-  `results/summary.txt`                  Summary statistics and selected top
-                                         genes
-  --------------------------------------------------------------------------
 
 ## Mitochondrial Sensitivity Analysis
 
@@ -328,25 +321,55 @@ repeats the comparison after excluding `MT-` genes.
 
 ## Software
 
-  Tool        Role
-  ----------- ------------------------------------------------------
-  Snakemake   Workflow orchestration and dependency tracking
-  Conda       Rule-specific software environments
-  R           Data preparation, statistical analysis, and plotting
-  limma       Differential-expression analysis
-  ggplot2     PCA and volcano-plot visualization
-  pheatmap    Heatmap generation
-  curl        Downloading the GEO supplementary file
+| Tool | Role |
+|---|---|
+| Snakemake | Workflow orchestration and dependency tracking |
+| Conda | Rule-specific software environments |
+| R | Data preparation, statistical analysis, and plotting |
+| limma | Differential-expression analysis |
+| ggplot2 | PCA and volcano-plot visualization |
+| pheatmap | Heatmap generation |
+| curl | Downloading the GEO supplementary file |
 
-Software dependencies are declared in `envs/download.yaml` and
-`envs/r.yaml`.
+Software dependencies are declared in `envs/download.yaml` and `envs/r.yaml`.
 
 ## License
 
 This project is distributed under the MIT License. See
 [LICENSE](LICENSE) for details.
 
-## Author
+---
 
-**Mohamed Elsisi**\
-GitHub: [@MohamedElsisii](https://github.com/MohamedElsisii)
+## Contributors and Affiliation
+
+This project was conducted by **Mohamed Elsisi** and **Dr. Hesham Abdullah** and belongs to **Horizon Science Communication LLC**.
+
+### Contributors
+
+**Alaa Elmansy**
+- Email: `ceo@horizon-sci-comm.us`
+- GitHub: [GitHub Profile]()
+- LinkedIn: [Alaa Elmansy](https://www.linkedin.com/in/alaa-mohamed-4171b1274/)
+
+**Dr. Abeer Desouky**
+- Email: `abeer.desouky@horizon-sci-comm.us`
+- GitHub: [GitHub Profile](https://github.com/abeerdesouky9-source)
+- LinkedIn: [Dr. Abeer Desouky](https://www.linkedin.com/in/abeer-f-desouky-394b0442/)
+
+**Dr. Hesham Abdullah**
+- Email: `ceo@horizon-sci-comm.us`
+- GitHub: [GitHub Profile](https://github.com/HABIOTECH)
+- LinkedIn: [Dr. Hesham Abdullah](https://www.linkedin.com/in/hesham-abdullah-40bab1190/)
+  
+**Mohamed Elsisi**
+- Email: `M.Elsisi@horizon-sci-comm.us`
+- GitHub: [MohamedElsisii](https://github.com/MohamedElsisii)
+- LinkedIn: [Mohamed Elsisi](https://www.linkedin.com/in/mohamed-elsisii)
+
+### Organization
+
+**Horizon Science Communication LLC**
+
+<img width="1448" height="1086" alt="Screenshot 2026-06-21 211033" src="https://github.com/user-attachments/assets/eff03aac-180b-46c2-baac-8433ebdafdad" />
+
+[Website](https://www.horizon-sci-comm.us/) 
