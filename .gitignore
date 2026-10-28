@@ -10,3 +10,11 @@ data/*.gz
 # Temporary files
 *.tmp
 *.log
+
+# Backup files
+*.bak
+*.R~
+
+# Local environment files
+.Rhistory
+.RData
