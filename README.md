@@ -198,7 +198,7 @@ A separate PCA excludes genes whose symbols begin with `MT-`:
 The volcano plot summarizes estimated log2 fold changes and adjusted
 p-values from the primary limma analysis.
 
-![Differential-expression volcano plot](results/volcano.png)
+![Differential-expression volcano plot](results/volcano.png.png)
 
 ### 3. Heatmap
 
