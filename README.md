@@ -158,7 +158,7 @@ Hypoxia-Related-Transcriptome-Changes-in-Prostate-Cancer/
     ├── summary.txt
     ├── PCA.png
     ├── PCA_no_mito.png
-    ├── volcano.png
+    ├── volcano.png.png
     └── heatmap_top30.png
 ```
 
