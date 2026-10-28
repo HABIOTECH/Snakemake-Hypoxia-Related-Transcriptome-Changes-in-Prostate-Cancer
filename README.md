@@ -347,8 +347,7 @@ This project was conducted by **Mohamed Elsisi** and **Dr. Hesham Abdullah** and
 ### Contributors
 
 **Alaa Elmansy**
-- Email: `ceo@horizon-sci-comm.us`
-- GitHub: [GitHub Profile]()
+- Email: `alaaelmansy325@gmail.com`
 - LinkedIn: [Alaa Elmansy](https://www.linkedin.com/in/alaa-mohamed-4171b1274/)
 
 **Dr. Abeer Desouky**
