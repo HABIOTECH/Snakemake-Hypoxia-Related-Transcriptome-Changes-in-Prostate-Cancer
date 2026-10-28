@@ -13,7 +13,7 @@ GSE106305, R, and limma.
 
 **- Alaa Elmansy**
 
-**- Dr. Abeer Dsouky**
+**- Dr. Abeer Desouky**
 
 **- Dr. Hesham Abdullah**
 
@@ -342,7 +342,7 @@ This project is distributed under the MIT License. See
 
 ## Contributors and Affiliation
 
-This project was conducted by **Mohamed Elsisi** and **Dr. Hesham Abdullah** and belongs to **Horizon Science Communication LLC**.
+This project was conducted by **Alaa Elmansy**, **Abeer Desouky**, **Dr. Hesham Abdullah**, and **Mohamed Elsisi**  and belongs to **Horizon Science Communication LLC**.
 
 ### Contributors
 
