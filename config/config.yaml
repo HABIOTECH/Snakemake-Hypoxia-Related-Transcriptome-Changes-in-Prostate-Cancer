@@ -1,0 +1,14 @@
+# ---------------- SETTINGS ----------------
+# Real data: GEO GSE106305, LNCaP prostate cancer cells (RPKM table from the authors)
+geo_url: "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE106nnn/GSE106305/suppl/GSE106305_LNCaP_RNA-seq_RPKM_OC2_Overexpression.txt.gz"
+
+# Columns of the GEO file to use (EV = empty-vector control cells)
+samples:
+  N_EV_1: normoxia
+  N_EV_2: normoxia
+  H_EV_1: hypoxia
+  H_EV_2: hypoxia
+
+min_rpkm: 1        # keep genes with mean RPKM >= 1
+padj_cutoff: 0.05
+lfc_cutoff: 1

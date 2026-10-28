@@ -1,0 +1,12 @@
+# Snakemake working files and environments
+.snakemake/
+
+# Logs
+logs/
+
+# Downloaded GEO data
+data/*.gz
+
+# Temporary files
+*.tmp
+*.log

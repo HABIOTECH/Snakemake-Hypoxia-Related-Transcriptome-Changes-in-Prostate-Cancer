@@ -1,0 +1,17 @@
+# STEP 2: read the GEO table, keep the chosen samples, filter, log2-transform
+log <- file(snakemake@log[[1]], open = "wt"); sink(log); sink(log, type = "message")
+
+x <- read.delim(snakemake@input[[1]], check.names = FALSE)
+txt <- which(!vapply(x, is.numeric, TRUE))              # text columns, if any
+genes <- if (length(txt) == 0) rownames(x) else as.character(x[[txt[1]]])
+smp <- unlist(snakemake@params[["samples"]])           # named: column -> condition
+stopifnot(all(names(smp) %in% colnames(x)))
+m <- as.matrix(x[, names(smp)])
+rownames(m) <- genes
+m <- m[!is.na(rownames(m)) & rownames(m) != "", ]
+m <- rowsum(m, rownames(m))                             # merge duplicate gene names
+m <- m[rowMeans(m) >= snakemake@params[["min_rpkm"]], ]
+cat("Genes kept:", nrow(m), "\n")
+
+write.csv(log2(m + 1), snakemake@output[["expr"]])
+write.csv(data.frame(sample = names(smp), condition = smp), snakemake@output[["samples"]], row.names = FALSE)
