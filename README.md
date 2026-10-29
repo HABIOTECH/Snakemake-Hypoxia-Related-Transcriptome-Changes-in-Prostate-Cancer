@@ -11,11 +11,10 @@ GSE106305, R, and limma.
 
 **Horizon Science Communication LLC — Bioinformatics Team**
 
-**- Alaa Elmansy**
 
-**- Dr. Abeer Desouky**
+**- Abeer Desouky, PhD**
 
-**- Dr. Hesham Abdullah**
+**- Hesham Abdullah, PhD**
 
 **- Mohamed Elsisi**
 
