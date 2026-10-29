@@ -1,4 +1,4 @@
-# Snakemake Hypoxia-Related Transcriptome Changes in Prostate Cancer
+# Snakemake-based workflow for Hypoxia-Related Transcriptome Changes in Prostate Cancer
 
 <img width="2164" height="727" alt="Untitled-1 copy" src="https://github.com/user-attachments/assets/d87eabfe-8836-4b1c-a448-0c3b5a86276b" />
 
