@@ -346,14 +346,14 @@ This project was conducted by **Alaa Elmansy**, **Abeer Desouky**, **Dr. Hesham 
 
 ### Contributors
 
-**Alaa Elmansy**
-- Email: `alaaelmansy325@gmail.com`
-- LinkedIn: [Alaa Elmansy](https://www.linkedin.com/in/alaa-mohamed-4171b1274/)
-
 **Dr. Abeer Desouky**
 - Email: `abeer.desouky@horizon-sci-comm.us`
 - GitHub: [GitHub Profile](https://github.com/abeerdesouky9-source)
 - LinkedIn: [Dr. Abeer Desouky](https://www.linkedin.com/in/abeer-f-desouky-394b0442/)
+
+**Alaa Elmansy**
+- Email: `alaaelmansy325@gmail.com`
+- LinkedIn: [Alaa Elmansy](https://www.linkedin.com/in/alaa-mohamed-4171b1274/)
 
 **Dr. Hesham Abdullah**
 - Email: `ceo@horizon-sci-comm.us`
